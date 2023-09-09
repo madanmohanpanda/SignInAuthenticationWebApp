@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up page</title>
+    <link rel="stylesheet" href="shineup.css">
+</head>
+<body>
+	<!--
+    <header>
+        <h1>Tech Update</h1>
+
+    </header>
+    -->
+    <div class="container">
+        <div class="img">
+            <img src="./img/job-7291427_1280.png" alt="img">
+        </div>
+        <h2 id="text" align="center" style="display:block; padding: 1rem;">Registration</h2>
+        <div class="form">
+            <form method="post" id="form" action="SignUpAction">
+                <table >
+                    <tr >
+                        <td>Name: </td>
+                        <td><input type="text" name="name" required></td>
+                    </tr>
+                    <tr>
+                        <td>Email: </td>
+                        <td><input type="email" name="email" required></td>
+                    </tr>
+                    <tr>
+                        <td>Password: </td>
+                        <td><input type="password" id="pass" name="password" required></td>
+                    </tr>
+                    <tr>
+                        <td>Confirm Password: </td>
+                        <td><input type="password" id="cpass" name="cpass" required></td>
+                    </tr>
+                    
+                    
+                </table>
+
+                
+
+                <div class="btns">
+                    <input class="btn" type="submit" id="submit" value="Sign Up">
+                    <input class="btn" type="reset" value="Reset">
+                </div>
+            </form>
+            <p>Already have an account <a href="sign.html">Sign in</a></p>
+            
+        </div>
+    </div>
+    <!--<script src="signUp.js"></script>-->
+    <script>
+		
+		const set = setTimeout(hide, 2000);
+		const text = document.getElementById('text');
+		
+		function hide(){
+			text.style.display="none";
+		}
+		const form = document.getElementById('form');
+
+form.addEventListener('submit', e=>{
+	
+	let pass = document.getElementById('pass').value;
+	let cpass = document.getElementById('cpass').value;
+	
+	if(pass !== cpass)
+	{
+		alert("password does not match");
+		e.preventDefault();
+	}
+})
+	</script>
+</body>
+</html>
